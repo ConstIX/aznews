@@ -1,7 +1,7 @@
 import React from 'react'
 import { post } from '../../../../data'
 
-const PostWidget = () => {
+const PostWidget: React.FC = () => {
    return (
       <aside className="single_sidebar_widget post_category_widget">
          <h4 className="widget_title">Category</h4>

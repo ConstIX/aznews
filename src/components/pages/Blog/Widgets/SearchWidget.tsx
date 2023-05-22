@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchWidget = () => {
+const SearchWidget: React.FC = () => {
    return (
       <aside className="single_sidebar_widget search_widget">
          <form action="#">

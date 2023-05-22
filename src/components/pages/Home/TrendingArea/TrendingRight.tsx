@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const TrendingRight = ({ color, image, title, text }) => {
+type TrendingRightProps = { color: string, image: string, title: string, text: string }
+
+const TrendingRight: React.FC<TrendingRightProps> = ({ color, image, title, text }) => {
    return (
       <div className="trand-right-single d-flex">
          <div className="trand-right-img">

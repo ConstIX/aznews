@@ -1,6 +1,8 @@
 import React from 'react'
 
-const WeeklyTopSingle = ({ image, title, date, text, link }) => {
+type WeeklyTopSingleProps = { image: any, title: string, date: string, text: string, link: string }
+
+const WeeklyTopSingle: React.FC<WeeklyTopSingleProps> = ({ image, title, date, text, link }) => {
    return (
       <div className="weekly2-single">
          <div className="weekly2-img">

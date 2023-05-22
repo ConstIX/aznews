@@ -4,7 +4,7 @@ import Trending from '../About/Trending'
 import Video from './Video'
 import VideoInfo from './VideoInfo'
 
-const LatestNews = () => {
+const LatestNews: React.FC = () => {
    return (
       <div className="youtube-area">
          <div className="container">

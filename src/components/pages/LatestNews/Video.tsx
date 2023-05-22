@@ -1,7 +1,7 @@
 import React from 'react'
 import { video } from '../../../data'
 
-const Video = () => {
+const Video: React.FC = () => {
    return (
       <div className="row">
          <div className="col-12">

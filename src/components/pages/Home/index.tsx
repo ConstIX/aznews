@@ -8,7 +8,7 @@ import WeeklyNews from './WeeklyNews'
 import WeeklyTopNews from './WeeklyTopNews'
 import RecentArticles from './RecentArticles'
 
-const Home = () => {
+const Home: React.FC = () => {
    return (
       <main>
 

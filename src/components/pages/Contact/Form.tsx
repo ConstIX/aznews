@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Form = () => {
+const Form: React.FC = () => {
    return (
-      <form className="form-contact contact_form mb-80" action="contact_process.php" method="post"
-         id="contactForm" noValidate="novalidate">
+      <form className="form-contact contact_form mb-80" action="" method="post"
+         id="contactForm">
          <div className="row">
             <div className="col-12">
                <div className="form-group">

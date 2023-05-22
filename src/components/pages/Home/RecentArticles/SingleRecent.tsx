@@ -1,6 +1,8 @@
 import React from 'react'
 
-const SingleRecent = ({ image, title, text, link }) => {
+type SingleRecentProps = { image: any, title: string, text: string, link: string }
+
+const SingleRecent: React.FC<SingleRecentProps> = ({ image, title, text, link }) => {
    return (
       <div className="single-recent mb-100">
          <div className="what-img">

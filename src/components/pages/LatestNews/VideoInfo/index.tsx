@@ -2,7 +2,7 @@ import React from 'react'
 import { videoInfo } from '../../../../data'
 import SingleVideo from './SingleVideo'
 
-const VideoInfo = () => {
+const VideoInfo: React.FC = () => {
    return (
       <div className="video-info">
          <div className="row">

@@ -6,7 +6,7 @@ import icon_ins from '../../../assets/img/news/icon-ins.png'
 import icon_yo from '../../../assets/img/news/icon-yo.png'
 import news_card from '../../../assets/img/news/news_card.jpg'
 
-const FollowUs = () => {
+const FollowUs: React.FC = () => {
    return (
       <div className="col-lg-4">
 

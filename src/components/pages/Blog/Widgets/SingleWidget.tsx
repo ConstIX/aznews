@@ -1,7 +1,7 @@
 import React from 'react'
 import { single } from '../../../../data'
 
-const SingleWidget = () => {
+const SingleWidget: React.FC = () => {
    return (
       <aside className="single_sidebar_widget instagram_feeds">
          <h4 className="widget_title">Instagram Feeds</h4>

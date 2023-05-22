@@ -8,7 +8,7 @@ import whatNews4 from '../../../assets/img/news/whatNews4.jpg'
 import CategoryPagination from './CategoryPagination'
 import FollowUs from './FollowUs'
 
-const Category = () => {
+const Category: React.FC = () => {
    return (
       <>
          <div className="whats-news-area pt-50 pb-20">

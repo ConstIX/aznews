@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Trending = () => {
+const Trending: React.FC = () => {
    return (
       <div className="row">
          <div className="col-lg-12">

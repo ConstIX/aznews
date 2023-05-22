@@ -5,7 +5,7 @@ import about_hero from '../../../assets/img/post/about_heor.jpg'
 import FollowUs from '../Category/FollowUs'
 import Trending from './Trending'
 
-const About = () => {
+const About: React.FC = () => {
    return (
       <div className="about-area">
          <div className="container">

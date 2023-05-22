@@ -8,7 +8,7 @@ import Trending from '../../About/Trending'
 import TrendingBottom from './TrendingBottom'
 import TrendingRight from './TrendingRight'
 
-const TrendingArea = () => {
+const TrendingArea: React.FC = () => {
    return (
       <div className="trending-area fix">
          <div className="container">

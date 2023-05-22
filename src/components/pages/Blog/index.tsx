@@ -11,7 +11,7 @@ import NewsWidget from './Widgets/NewsWidget'
 
 import { blog } from '../../../data'
 
-const Blog = () => {
+const Blog: React.FC = () => {
    return (
       <div className="blog_area section-padding">
          <div className="container">

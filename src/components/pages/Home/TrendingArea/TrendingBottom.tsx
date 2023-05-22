@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const TrendingBottom = ({ color, image, title, text }) => {
+type TrendingBottomProps = { color: string, image: string, title: string, text: string }
+
+const TrendingBottom: React.FC<TrendingBottomProps> = ({ color, image, title, text }) => {
    return (
       <div className="col-lg-4">
          <div className="single-bottom mb-35">

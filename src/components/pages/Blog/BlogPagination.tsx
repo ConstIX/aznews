@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BlogPagination = () => {
+const BlogPagination: React.FC = () => {
    return (
       <nav className="blog-pagination justify-content-center d-flex">
          <ul className="pagination">

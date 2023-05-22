@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const BlogItem = ({ image, date, title, text, user, comments }) => {
+type BlogItemProps = { image: any, date: { num: number, month: string }, title: string, text: string, user: string, comments: string }
+
+const BlogItem: React.FC<BlogItemProps> = ({ image, date, title, text, user, comments }) => {
    return (
       <article className="blog_item">
          <div className="blog_item_img">

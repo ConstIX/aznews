@@ -1,12 +1,12 @@
 import React from 'react'
-import { news } from '../../../../data'
-import WeeklySingle from './WeeklySingle'
+import { newsTop } from '../../../../data'
+import WeeklyTopSingle from './WeeklyTopSingle'
 
-const WeeklyNews = () => {
+const WeeklyTopNews: React.FC = () => {
    return (
-      <div className="weekly-news-area pt-50">
+      <div className="weekly2-news-area  weekly2-pading gray-bg">
          <div className="container">
-            <div className="weekly-wrapper">
+            <div className="weekly2-wrapper">
 
                <div className="row">
                   <div className="col-lg-12">
@@ -17,8 +17,8 @@ const WeeklyNews = () => {
                </div>
                <div className="row">
                   <div className="col-12">
-                     <div className="weekly-news-active dot-style d-flex dot-style">
-                        {news.map(obj => <WeeklySingle key={obj.title} {...obj} />)}
+                     <div className="weekly2-news-active dot-style d-flex dot-style">
+                        {newsTop.map(obj => <WeeklyTopSingle key={obj.title} {...obj} />)}
                      </div>
                   </div>
                </div>
@@ -28,4 +28,4 @@ const WeeklyNews = () => {
    )
 }
 
-export default WeeklyNews
+export default WeeklyTopNews

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { popular } from '../../../../data'
 
-const PopularWidget = () => {
+const PopularWidget: React.FC = () => {
    return (
       <aside className="single_sidebar_widget popular_post_widget">
          <h3 className="widget_title">Recent Post</h3>

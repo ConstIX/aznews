@@ -1,6 +1,8 @@
 import React from 'react'
 
-const SingleVideo = ({ link, title }) => {
+type SingleVideoProps = { link: string, title: string }
+
+const SingleVideo: React.FC<SingleVideoProps> = ({ link, title }) => {
    return (
       <div className="single-video">
          <iframe src={link} frameBorder="0"

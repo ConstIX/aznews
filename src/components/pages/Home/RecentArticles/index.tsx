@@ -5,7 +5,7 @@ import RecentPagination from './RecentPagination'
 import SingleRecent from './SingleRecent'
 
 
-const RecentArticles = () => {
+const RecentArticles: React.FC = () => {
    return (
       <>
          <div className="recent-articles">
