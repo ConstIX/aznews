@@ -1,0 +1,27 @@
+// Defult
+@import '../scss/variables';
+@import '../scss/mixins';
+@import '../scss/overlay';
+@import '../scss/common';
+@import '../scss/color';
+
+// Homepage1
+@import '../scss/scss-components/headerMenu';
+@import '../scss/scss-components/trending';
+@import '../scss/scss-components/wecky-new';
+@import '../scss/scss-components/whats-new';
+
+@import '../scss/scss-components/wecky2-new';
+@import '../scss/scss-components/youtube';
+@import '../scss/scss-components/recent-articles';
+@import '../scss/scss-components/about-page';
+@import '../scss/scss-components/footer';
+
+// inner Page
+@import '../scss/scss-components/services';
+
+// Deful Element Page
+@import '../scss/scss-components/blog_page';
+@import '../scss/scss-components/contact';
+@import '../scss/scss-components/bradcam';
+@import '../scss/extend';
