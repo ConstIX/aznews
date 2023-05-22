@@ -7,7 +7,7 @@ import header_card from '../assets/img/hero/header_card.jpg'
 
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header: React.FC = () => {
    return (
       <>
          <header>

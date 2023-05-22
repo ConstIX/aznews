@@ -1,6 +1,8 @@
 import React from 'react'
 
-const CommentList = ({ avatar, text, user, date }) => {
+type commentListProps = { avatar: any, text: string, user: string, date: string }
+
+const CommentList: React.FC<commentListProps> = ({ avatar, text, user, date }) => {
    return (
       <div className="comment-list">
          <div className="single-comment justify-content-between d-flex">

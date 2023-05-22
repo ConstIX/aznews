@@ -10,7 +10,7 @@ import Trending from '../pages/About/Trending'
 import FollowUs from '../pages/Category/FollowUs'
 import Form from '../pages/Contact/Form'
 
-const Details = () => {
+const Details: React.FC = () => {
    return (
       <div className="about-area">
          <div className="container">

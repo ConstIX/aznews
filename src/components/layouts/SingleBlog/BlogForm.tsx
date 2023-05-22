@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BlogForm = () => {
+const BlogForm: React.FC = () => {
    return (
       <div className="comment-form">
          <h4>Leave a Reply</h4>

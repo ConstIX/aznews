@@ -12,7 +12,7 @@ import TagWidget from '../../pages/Blog/Widgets/TagWidget'
 import BlogForm from './BlogForm'
 import CommentList from './CommentList'
 
-const SingleBlog = () => {
+const SingleBlog: React.FC = () => {
    return (
       <div className="blog_area single-post-area section-padding">
          <div className="container">
@@ -67,7 +67,7 @@ const SingleBlog = () => {
 
                   <div className="comments-area">
                      <h4>3 Comments</h4>
-                     {list.map(obj => <CommentList key={obj.text} {...obj} />)}
+                     {list.map((obj) => <CommentList key={obj.text} {...obj} />)}
                   </div>
 
                   <BlogForm />

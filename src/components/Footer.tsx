@@ -10,7 +10,7 @@ import instra4 from '../assets/img/post/instra4.jpg'
 import instra5 from '../assets/img/post/instra5.jpg'
 import instra6 from '../assets/img/post/instra6.jpg'
 
-const Footer = () => {
+const Footer: React.FC = () => {
    return (
 
       <footer>
