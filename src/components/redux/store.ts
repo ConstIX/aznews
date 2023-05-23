@@ -2,11 +2,11 @@ import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch, useSelector } from 'react-redux'
 import type { TypedUseSelectorHook } from 'react-redux'
 
-import first from './slices/firstSlice'
+import rightNewsReducer from './slices/rightNewsSlice'
 
 export const store = configureStore({
    reducer: {
-      first
+      rightNewsReducer
    },
 })
 

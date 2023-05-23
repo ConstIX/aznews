@@ -1,14 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { trendBottom, trendRight } from '../../../../data'
+import { trendBottom } from '../../../../data'
 
 import trending_top from '../../../../assets/img/trending/trending_top.jpg'
 
 import Trending from '../../About/Trending'
 import TrendingBottom from './TrendingBottom'
 import TrendingRight from './TrendingRight'
+import { useAppDispatch, useAppSelector } from '../../../redux/store'
+import { fetchRightNews } from '../../../redux/slices/rightNewsSlice'
 
 const TrendingArea: React.FC = () => {
+
+   const dispatch = useAppDispatch()
+   const { rightNews } = useAppSelector(state => state.rightNewsReducer)
+
+   const getNews = async () => {
+      dispatch(fetchRightNews())
+   }
+   React.useEffect(() => {
+      getNews()
+   }, [])
+
    return (
       <div className="trending-area fix">
          <div className="container">
@@ -38,7 +51,7 @@ const TrendingArea: React.FC = () => {
                   </div>
 
                   <div className="col-lg-4">
-                     {trendRight.map(obj => <TrendingRight key={obj.title} {...obj} />)}
+                     {rightNews.map((obj: any) => <TrendingRight key={obj.title} {...obj} />)}
                   </div>
                </div>
 
