@@ -9,11 +9,12 @@ import TrendingBottom from './TrendingBottom'
 import TrendingRight from './TrendingRight'
 import { useAppDispatch, useAppSelector } from '../../../redux/store'
 import { fetchRightNews } from '../../../redux/slices/rightNewsSlice'
+import Skeleton from './Skeleton'
 
 const TrendingArea: React.FC = () => {
 
    const dispatch = useAppDispatch()
-   const { rightNews } = useAppSelector(state => state.rightNewsReducer)
+   const { rightNews, status } = useAppSelector(state => state.rightNewsReducer)
 
    const getNews = async () => {
       dispatch(fetchRightNews())
@@ -51,7 +52,9 @@ const TrendingArea: React.FC = () => {
                   </div>
 
                   <div className="col-lg-4">
-                     {rightNews.map((obj: any) => <TrendingRight key={obj.title} {...obj} />)}
+                     {
+                        status === 'loading' ? [...new Array(6)].map((_, index) => <Skeleton key={index} />) : rightNews.map((obj: any) => <TrendingRight key={obj.title} {...obj} />)
+                     }
                   </div>
                </div>
 
