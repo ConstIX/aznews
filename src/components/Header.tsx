@@ -8,6 +8,18 @@ import header_card from '../assets/img/hero/header_card.jpg'
 import { Link } from 'react-router-dom'
 
 const Header: React.FC = () => {
+
+   // const [input, setInput] = React.useState("")
+   // const fetchData = (value: any) => {
+   //    fetch("https://newsdata.io/api/1/news?country=uz&apikey=pub_225990e2bfdf029519a51c8174634c7ab512e&q=%D0%BF%D1%83%D0%BB")
+   //       .then(res => res.json())
+   //       .then(json => console.log(json.results))
+
+   // }
+   // const handleChange = (value: any) => {
+   //    setInput(value)
+   //    fetchData(value)
+   // }
    return (
       <>
          <header>
@@ -77,6 +89,7 @@ const Header: React.FC = () => {
                                  </nav>
                               </div>
                            </div>
+
                            <div className="col-xl-2 col-lg-2 col-md-4">
                               <div className="header-right-btn f-right d-none d-lg-block">
                                  <i className="fas fa-search special-tag"></i>

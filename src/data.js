@@ -85,11 +85,7 @@ import recent3 from './assets/img/news/recent3.jpg'
 import bottom1 from './assets/img/trending/trending_bottom1.jpg'
 import bottom2 from './assets/img/trending/trending_bottom2.jpg'
 import bottom3 from './assets/img/trending/trending_bottom3.jpg'
-import right1 from './assets/img/trending/right1.jpg'
-import right2 from './assets/img/trending/right2.jpg'
-import right3 from './assets/img/trending/right3.jpg'
-import right4 from './assets/img/trending/right4.jpg'
-import right5 from './assets/img/trending/right5.jpg'
+
 import weeklyNews3 from './assets/img/news/weeklyNews3.jpg'
 import weeklyNews2 from './assets/img/news/weeklyNews2.jpg'
 import weeklyNews1 from './assets/img/news/weeklyNews1.jpg'
@@ -107,13 +103,6 @@ export const trendBottom = [
    { color: 'color1', image: bottom1, title: 'Lifestyple', text: 'Get the Illusion of Fuller Lashes by “Mascng.”' },
    { color: 'color2', image: bottom2, title: 'Sports', text: 'Get the Illusion of Fuller Lashes by “Mascng.”' },
    { color: 'color3', image: bottom3, title: 'Travels', text: ' Welcome To The Best Model Winner Contest' }
-]
-export const trendRight = [
-   { color: 'color1', image: right1, title: 'Concert', text: ' Welcome To The Best Model Winner Contest' },
-   { color: 'color2', image: right2, title: 'sea beach', text: 'Welcome To The Best Model Winner Contest' },
-   { color: 'color3', image: right3, title: 'Bike Show', text: ' Welcome To The Best Model Winner Contest' },
-   { color: 'color4', image: right4, title: 'sea concert', text: ' Welcome To The Best Model Winner Contest' },
-   { color: 'color1', image: right5, title: 'Skeping', text: ' Welcome To The Best Model Winner Contest' }
 ]
 export const news = [
    { image: weeklyNews3, title: 'Strike', text: 'Welcome To The Best Model Winner Contest', link: '#' },
