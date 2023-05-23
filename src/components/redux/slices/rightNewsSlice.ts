@@ -4,9 +4,7 @@ import axios from 'axios'
 type TypeRightNews = {
    image_url: string,
    link: string,
-   title: string,
-   description: string
-
+   title: string
 }
 interface InterfaceRightNews {
    rightNews: TypeRightNews[],
@@ -14,7 +12,7 @@ interface InterfaceRightNews {
 }
 
 export const fetchRightNews = createAsyncThunk('pizza/fetchPizzaStatus', async () => {
-   const res = await axios.get("https://newsdata.io/api/1/news?country=uz&apikey=pub_225990e2bfdf029519a51c8174634c7ab512e")
+   const res = await axios.get(`https://newsdata.io/api/1/news?country=uz&apikey=pub_225990e2bfdf029519a51c8174634c7ab512e`)
    return res.data.results as TypeRightNews[]
 })
 

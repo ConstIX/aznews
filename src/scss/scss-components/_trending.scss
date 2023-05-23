@@ -134,12 +134,19 @@
          }
 
          .trand-right-img {
+            flex: 0 1 30%;
+
+
             img {
+               max-width: 100%;
+               width: 120px;
+               height: 80px;
                border-radius: 6px;
             }
          }
 
          .trand-right-cap {
+            flex: 0 1 70%;
             padding-left: 18px;
 
             span {
@@ -177,11 +184,7 @@
 }
 
 // Hover Effect
-.trend-top-img:hover {
-   img {
-      // transform: scale(1.1);
-   }
-}
+
 
 .single-bottom:hover {
    .trend-bottom-img img {
