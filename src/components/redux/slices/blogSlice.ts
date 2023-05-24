@@ -13,8 +13,9 @@ interface InterfaceBlog {
    status: string
 }
 
-export const fetchBlog = createAsyncThunk('pizza/fetchBlogStatus', async () => {
-   const res = await axios.get(`https://newsdata.io/api/1/news?country=uz&apikey=pub_225990e2bfdf029519a51c8174634c7ab512e&q=%D0%BF%D1%83%D0%BB`)
+export const fetchBlog = createAsyncThunk('pizza/fetchBlogStatus', async (params: Record<string, string>) => {
+   const { newsSearch } = params
+   const res = await axios.get(`https://newsdata.io/api/1/news?country=uz&apikey=pub_225990e2bfdf029519a51c8174634c7ab512e&q=%D0%BF%D1%83%D0%BB${newsSearch}`)
    const data = res.data.results
    return data
 })

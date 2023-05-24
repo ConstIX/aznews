@@ -11,14 +11,17 @@ import NewsWidget from './Widgets/NewsWidget'
 
 import { useAppDispatch, useAppSelector } from '../../redux/store'
 import { fetchBlog } from '../../redux/slices/blogSlice'
+import BlogSkeleton from './BlogSkeleton'
 
 const Blog: React.FC = () => {
 
    const dispatch = useAppDispatch()
    const { blog, status } = useAppSelector(state => state.blogReducer)
+   const { search } = useAppSelector(state => state.filterReducer)
 
    const getBlog = async () => {
-      dispatch(fetchBlog())
+      const newsSearch = (search ? `&q=${search} ` : '')
+      dispatch(fetchBlog({ newsSearch }))
    }
    React.useEffect(() => {
       getBlog()
@@ -31,7 +34,10 @@ const Blog: React.FC = () => {
 
                <div className="col-lg-8 mb-5 mb-lg-0">
                   <div className="blog_left_sidebar">
-                     {blog.map((obj: any) => <BlogItem key={obj.title} {...obj} />)}
+                     {
+                        status === 'loading' ? [...new Array(3)].map((_, index) => <BlogSkeleton key={index} />) :
+                           blog.filter(obj => obj.title.toLowerCase().includes(search.toLowerCase())).map((obj: any) => <BlogItem key={obj.title} {...obj} />)
+                     }
 
                      <BlogPagination />
                   </div>

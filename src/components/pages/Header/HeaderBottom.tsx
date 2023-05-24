@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+
 import logo from '../../../assets/img/logo/logo.png'
+import { useAppDispatch, useAppSelector } from '../../redux/store'
+import { setSearch } from '../../redux/slices/filterSlice'
 
 const headerNav = [
    { link: '/', name: 'Home' },
@@ -14,8 +17,10 @@ const headerNav = [
 const HeaderBottom: React.FC = () => {
 
    const navigate = useNavigate()
+   const dispatch = useAppDispatch()
+   const { search } = useAppSelector(state => state.filterReducer)
 
-   const handleSubmit = (e) => {
+   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault()
       navigate("/blog")
    }
@@ -33,7 +38,7 @@ const HeaderBottom: React.FC = () => {
                   <div className="main-menu d-none d-md-block">
                      <nav>
                         <ul id="navigation">
-                           {headerNav.map(obj => <li key={obj.name}><Link to={obj.link}>{obj.name}</Link></li>)}
+                           {headerNav.map(obj => <li key={obj.name}><a href={obj.link}>{obj.name}</a></li>)}
                         </ul>
                      </nav>
                   </div>
@@ -44,7 +49,7 @@ const HeaderBottom: React.FC = () => {
                      <i className="fas fa-search special-tag"></i>
                      <div className="search-box">
                         <form onSubmit={handleSubmit}>
-                           <input type="text" placeholder="Search" />
+                           <input value={search} onChange={(e) => dispatch(setSearch(e.target.value))} type="text" placeholder="Search" />
                         </form>
                      </div>
                   </div>
