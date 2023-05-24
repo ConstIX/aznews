@@ -20,7 +20,7 @@ const Blog: React.FC = () => {
    const { search } = useAppSelector(state => state.filterReducer)
 
    const getBlog = async () => {
-      const newsSearch = (search ? `&q=${search} ` : '')
+      const newsSearch = (search ? `?search=${search} ` : '')
       dispatch(fetchBlog({ newsSearch }))
    }
    React.useEffect(() => {

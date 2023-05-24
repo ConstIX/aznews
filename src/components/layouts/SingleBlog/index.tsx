@@ -9,9 +9,32 @@ import SingleWidget from '../../pages/Blog/Widgets/SingleWidget'
 import TagWidget from '../../pages/Blog/Widgets/TagWidget'
 import BlogForm from './BlogForm'
 import CommentList from './CommentList'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
+type SingleBlogState = {
+   image_url: string,
+   title: string,
+   content: string
+}
 
 const SingleBlog: React.FC = () => {
+
+   const [singleNews, setSingleNews] = React.useState<SingleBlogState[]>([])
+   const { id } = useParams()
+
+   React.useEffect(() => {
+      async function fetchSingleNews() {
+         try {
+            const res = await axios.get(`https://646d04c77b42c06c3b2c6d6e.mockapi.io/items/` + id)
+            const data = res.data
+            setSingleNews(data)
+         } catch (eror) {
+            alert('EROR!!!')
+         }
+      }
+      fetchSingleNews()
+   }, [])
 
    return (
       <div className="blog_area single-post-area section-padding">
@@ -22,14 +45,14 @@ const SingleBlog: React.FC = () => {
 
                   <div className="single-post">
                      <div className="feature-img">
-                        <img className="img-fluid" src='' alt="" />
+                        <img className="img-fluid" src={singleNews.image_url} alt="" />
                      </div>
                      <div className="blog_details">
                         <h2>
-
+                           {singleNews.title}
                         </h2>
                         <p className="excert">
-
+                           {singleNews.content}
                         </p>
                      </div>
                   </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-type BlogItemProps = { pubDate: string, image_url: any, title: string, description: string }
+type BlogItemProps = { id: string, pubDate: string, image_url: any, title: string, description: string }
 
-const BlogItem: React.FC<BlogItemProps> = ({ pubDate, image_url, title, description }) => {
+const BlogItem: React.FC<BlogItemProps> = ({ id, pubDate, image_url, title, description }) => {
    return (
       <article className="blog_item">
          <div className="blog_item_img">
@@ -14,7 +14,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ pubDate, image_url, title, descript
          </div>
 
          <div className="blog_details">
-            <Link to={`/single`} className="d-inline-block">
+            <Link to={`/single/${id}`} className="d-inline-block">
                <h2>{title}</h2>
             </Link>
             <p>{description}</p>
