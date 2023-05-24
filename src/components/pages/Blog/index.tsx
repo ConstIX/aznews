@@ -9,9 +9,21 @@ import TagWidget from './Widgets/TagWidget'
 import SingleWidget from './Widgets/SingleWidget'
 import NewsWidget from './Widgets/NewsWidget'
 
-import { blog } from '../../../data'
+import { useAppDispatch, useAppSelector } from '../../redux/store'
+import { fetchBlog } from '../../redux/slices/blogSlice'
 
 const Blog: React.FC = () => {
+
+   const dispatch = useAppDispatch()
+   const { blog, status } = useAppSelector(state => state.blogReducer)
+
+   const getBlog = async () => {
+      dispatch(fetchBlog())
+   }
+   React.useEffect(() => {
+      getBlog()
+   }, [])
+
    return (
       <div className="blog_area section-padding">
          <div className="container">
@@ -19,7 +31,7 @@ const Blog: React.FC = () => {
 
                <div className="col-lg-8 mb-5 mb-lg-0">
                   <div className="blog_left_sidebar">
-                     {blog.map(obj => <BlogItem key={obj.title} {...obj} />)}
+                     {blog.map((obj: any) => <BlogItem key={obj.title} {...obj} />)}
 
                      <BlogPagination />
                   </div>

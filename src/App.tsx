@@ -2,7 +2,7 @@ import React from "react"
 import { Route, Routes } from "react-router-dom"
 import './scss/style.scss'
 
-import Header from "./components/Header"
+import Header from "./components/pages/Header"
 import Home from "./components/pages/Home"
 import Category from "./components/pages/Category"
 import About from "./components/pages/About"

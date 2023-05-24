@@ -7,7 +7,7 @@ import post_4 from './assets/img/post/post_4.png'
 export const blog = [
    {
       image: single_blog,
-      date: { num: 15, month: 'Jan' },
+      date: 'Jan',
       title: 'Google inks pact for new 35-storey ',
       text: 'That dominion stars lights dominion divide years for fourth have dont stars is that he earth it first without heaven in place seed it second morning saying.',
       user: 'Travel Lifestyle',
@@ -15,7 +15,7 @@ export const blog = [
    },
    {
       image: single_blog,
-      date: { num: 15, month: 'Jan' },
+      date: 'Jan',
       title: 'Google inks pact for new  office',
       text: 'That dominion stars lights dominion divide years for fourth have dont stars is that he earth it first without heaven in place seed it second morning saying.',
       user: 'Travel Lifestyle',
@@ -23,7 +23,7 @@ export const blog = [
    },
    {
       image: single_blog,
-      date: { num: 15, month: 'Jan' },
+      date: 'Jan',
       title: 'Google inks pact for  35-storey office',
       text: 'That dominion stars lights dominion divide years for fourth have dont stars is that he earth it first without heaven in place seed it second morning saying.',
       user: 'Travel Lifestyle',

@@ -1,28 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-type BlogItemProps = { image: any, date: { num: number, month: string }, title: string, text: string, user: string, comments: string }
+type BlogItemProps = { link: string, pubDate: string, image_url: any, title: string, description: string }
 
-const BlogItem: React.FC<BlogItemProps> = ({ image, date, title, text, user, comments }) => {
+const BlogItem: React.FC<BlogItemProps> = ({ link, pubDate, image_url, title, description }) => {
    return (
       <article className="blog_item">
          <div className="blog_item_img">
-            <img className="card-img rounded-0" src={image} alt="" />
+            <img className="card-img rounded-0" src={image_url} alt="" />
             <span className="blog_item_date">
-               <h3>{date.num}</h3>
-               <p>{date.month}</p>
+               <p>{pubDate}</p>
             </span>
          </div>
 
          <div className="blog_details">
-            <Link to="/single" className="d-inline-block">
+            <a href={link} className="d-inline-block">
                <h2>{title}</h2>
-            </Link>
-            <p>{text}</p>
-            <ul className="blog-info-link">
-               <li><a href="#"><i className="fa fa-user"></i> {user}</a></li>
-               <li><a href="#"><i className="fa fa-comments"></i> {comments} Comments</a></li>
-            </ul>
+            </a>
+            <p>{description}</p>
          </div>
       </article>
    )

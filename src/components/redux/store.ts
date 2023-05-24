@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import type { TypedUseSelectorHook } from 'react-redux'
 
 import rightNewsReducer from './slices/rightNewsSlice'
+import blogReducer from './slices/blogSlice'
 
 export const store = configureStore({
    reducer: {
-      rightNewsReducer
+      rightNewsReducer,
+      blogReducer
    },
 })
 
