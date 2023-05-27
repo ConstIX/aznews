@@ -12,9 +12,9 @@ interface InterfaceRightNews {
 }
 
 export const fetchRightNews = createAsyncThunk('pizza/NewsStatus', async () => {
-   const res = await axios.get(`https://newsdata.io/api/1/news?country=uz&apikey=pub_225990e2bfdf029519a51c8174634c7ab512e`)
+   // const res = await axios.get(`https://newsdata.io/api/1/news?country=uz&apikey=pub_225990e2bfdf029519a51c8174634c7ab512e`)
    const data = res.data.results
-   return data.slice(data.length - 6)
+   return data.slice(data.length - 6) as TypeRightNews[]
 })
 
 

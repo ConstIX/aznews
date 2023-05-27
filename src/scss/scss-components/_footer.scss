@@ -229,6 +229,10 @@
       outline: 0;
    }
 
+   .invisible {
+      opacity: 0;
+   }
+
    .page-link.active {
       position: relative;
       box-shadow: none;

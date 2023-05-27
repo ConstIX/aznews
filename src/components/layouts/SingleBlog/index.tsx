@@ -4,7 +4,6 @@ import { list } from '../../../data'
 import NewsWidget from '../../pages/Blog/Widgets/NewsWidget'
 import PopularWidget from '../../pages/Blog/Widgets/PopularWidget'
 import PostWidget from '../../pages/Blog/Widgets/PostWidget'
-import SearchWidget from '../../pages/Blog/Widgets/SearchWidget'
 import SingleWidget from '../../pages/Blog/Widgets/SingleWidget'
 import TagWidget from '../../pages/Blog/Widgets/TagWidget'
 import BlogForm from './BlogForm'
@@ -68,7 +67,6 @@ const SingleBlog: React.FC = () => {
 
                <div className="col-lg-4">
                   <div className="blog_right_sidebar">
-                     <SearchWidget />
                      <PostWidget />
                      <PopularWidget />
                      <TagWidget />

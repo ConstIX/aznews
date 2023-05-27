@@ -2,7 +2,6 @@ import React from 'react'
 
 import BlogItem from './BlogItem'
 import BlogPagination from './BlogPagination'
-import SearchWidget from './Widgets/SearchWidget'
 import PostWidget from './Widgets/PostWidget'
 import PopularWidget from './Widgets/PopularWidget'
 import TagWidget from './Widgets/TagWidget'
@@ -17,15 +16,15 @@ const Blog: React.FC = () => {
 
    const dispatch = useAppDispatch()
    const { blog, status } = useAppSelector(state => state.blogReducer)
-   const { search } = useAppSelector(state => state.filterReducer)
+   const { search, page } = useAppSelector(state => state.filterReducer)
 
    const getBlog = async () => {
-      const newsSearch = (search ? `?search=${search} ` : '')
-      dispatch(fetchBlog({ newsSearch }))
+      const newsSearch = (search ? `search=${search} ` : '')
+      dispatch(fetchBlog({ newsSearch, page: String(page) }))
    }
    React.useEffect(() => {
       getBlog()
-   }, [])
+   }, [search, page])
 
    return (
       <div className="blog_area section-padding">
@@ -45,7 +44,6 @@ const Blog: React.FC = () => {
 
                <div className="col-lg-4">
                   <div className="blog_right_sidebar">
-                     <SearchWidget />
                      <PostWidget />
                      <PopularWidget />
                      <TagWidget />
