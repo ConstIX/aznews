@@ -8,7 +8,6 @@ import icon_yo from '../../assets/img/news/icon-yo.png'
 
 import Trending from '../pages/About/Trending'
 import FollowUs from '../pages/Category/FollowUs'
-import Form from '../pages/Contact/Form'
 
 const Details: React.FC = () => {
    return (
@@ -26,10 +25,6 @@ const Details: React.FC = () => {
                         <h3>Here come the moms in space</h3>
                      </div>
                      <div className="about-prea">
-                        <p className="about-pera1 mb-25">Moms are like…buttons? Moms are like glue. Moms are like pizza
-                           crusts. Moms are the ones who make sure things happen—from birth to school lunch.</p>
-                        <p className="about-pera1 mb-25">Moms are like…buttons? Moms are like glue. Moms are like pizza
-                           crusts. Moms are the ones who make sure things happen—from birth to school lunch.</p>
                         <p className="about-pera1 mb-25">
                            My hero when I was a kid was my mom. Same for everyone I knew. Moms are untouchable. They’re
                            elegant, smart, beautiful, kind…everything we want to be. At 29 years old, my favorite
@@ -52,12 +47,6 @@ const Details: React.FC = () => {
                               <li><a href="#"><img src={icon_yo} alt="" /></a></li>
                            </ul>
                         </div>
-                     </div>
-                  </div>
-
-                  <div className="row">
-                     <div className="col-lg-8">
-                        <Form />
                      </div>
                   </div>
 

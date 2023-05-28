@@ -12,19 +12,9 @@ const BlogForm: React.FC = () => {
                         placeholder="Write Comment"></textarea>
                   </div>
                </div>
-               <div className="col-sm-6">
+               <div className="col-sm-12">
                   <div className="form-group">
                      <input className="form-control" name="name" id="name" type="text" placeholder="Name" />
-                  </div>
-               </div>
-               <div className="col-sm-6">
-                  <div className="form-group">
-                     <input className="form-control" name="email" id="email" type="email" placeholder="Email" />
-                  </div>
-               </div>
-               <div className="col-12">
-                  <div className="form-group">
-                     <input className="form-control" name="website" id="website" type="text" placeholder="Website" />
                   </div>
                </div>
             </div>

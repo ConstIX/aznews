@@ -4,32 +4,7 @@ import post_1 from './assets/img/post/post_1.png'
 import post_2 from './assets/img/post/post_2.png'
 import post_3 from './assets/img/post/post_3.png'
 import post_4 from './assets/img/post/post_4.png'
-export const blog = [
-   {
-      image: single_blog,
-      date: 'Jan',
-      title: 'Google inks pact for new 35-storey ',
-      text: 'That dominion stars lights dominion divide years for fourth have dont stars is that he earth it first without heaven in place seed it second morning saying.',
-      user: 'Travel Lifestyle',
-      comments: '3'
-   },
-   {
-      image: single_blog,
-      date: 'Jan',
-      title: 'Google inks pact for new  office',
-      text: 'That dominion stars lights dominion divide years for fourth have dont stars is that he earth it first without heaven in place seed it second morning saying.',
-      user: 'Travel Lifestyle',
-      comments: '3'
-   },
-   {
-      image: single_blog,
-      date: 'Jan',
-      title: 'Google inks pact for  35-storey office',
-      text: 'That dominion stars lights dominion divide years for fourth have dont stars is that he earth it first without heaven in place seed it second morning saying.',
-      user: 'Travel Lifestyle',
-      comments: '3'
-   }
-]
+
 export const popular = [
    { image: post_1, title: 'From life was you fish...', date: 'January 12, 2019', link: '/single' },
    { image: post_2, title: 'The Amazing Hubble', date: '2 Hours ago', link: '/single' },

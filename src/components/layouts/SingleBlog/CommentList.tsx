@@ -14,9 +14,7 @@ const CommentList: React.FC<commentListProps> = ({ avatar, text, user, date }) =
                   <p className="comment">{text}</p>
                   <div className="d-flex justify-content-between">
                      <div className="d-flex align-items-center">
-                        <h5>
-                           <a href="#">{user}</a>
-                        </h5>
+                        <h5>{user}</h5>
                         <p className="date">{date}</p>
                      </div>
                      <div className="reply-btn">
