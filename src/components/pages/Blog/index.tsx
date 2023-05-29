@@ -4,8 +4,6 @@ import BlogItem from './BlogItem'
 import BlogPagination from './BlogPagination'
 import PostWidget from './Widgets/PostWidget'
 import PopularWidget from './Widgets/PopularWidget'
-import TagWidget from './Widgets/TagWidget'
-import SingleWidget from './Widgets/SingleWidget'
 import NewsWidget from './Widgets/NewsWidget'
 
 import { useAppDispatch, useAppSelector } from '../../redux/store'
@@ -46,8 +44,6 @@ const Blog: React.FC = () => {
                   <div className="blog_right_sidebar">
                      <PostWidget />
                      <PopularWidget />
-                     <TagWidget />
-                     <SingleWidget />
                      <NewsWidget />
                   </div>
                </div>

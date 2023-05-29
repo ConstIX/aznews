@@ -4,8 +4,6 @@ import { list } from '../../../data'
 import NewsWidget from '../../pages/Blog/Widgets/NewsWidget'
 import PopularWidget from '../../pages/Blog/Widgets/PopularWidget'
 import PostWidget from '../../pages/Blog/Widgets/PostWidget'
-import SingleWidget from '../../pages/Blog/Widgets/SingleWidget'
-import TagWidget from '../../pages/Blog/Widgets/TagWidget'
 import BlogForm from './BlogForm'
 import CommentList from './CommentList'
 import { useParams } from 'react-router-dom'
@@ -69,8 +67,6 @@ const SingleBlog: React.FC = () => {
                   <div className="blog_right_sidebar">
                      <PostWidget />
                      <PopularWidget />
-                     <TagWidget />
-                     <SingleWidget />
                      <NewsWidget />
                   </div>
                </div>
