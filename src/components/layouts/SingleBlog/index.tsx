@@ -1,11 +1,12 @@
 import React from 'react'
-import { list } from '../../../data'
 
-import NewsWidget from '../../pages/Blog/Widgets/NewsWidget'
+import icon_ins from '../../../assets/img/news/icon-ins.png'
+import icon_fb from '../../../assets/img/news/icon-fb.png'
+import icon_tw from '../../../assets/img/news/icon-tw.png'
+import icon_yo from '../../../assets/img/news/icon-yo.png'
+
 import PopularWidget from '../../pages/Blog/Widgets/PopularWidget'
 import PostWidget from '../../pages/Blog/Widgets/PostWidget'
-import BlogForm from './BlogForm'
-import CommentList from './CommentList'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
@@ -54,12 +55,23 @@ const SingleBlog: React.FC = () => {
                      </div>
                   </div>
 
-                  <div className="comments-area">
+                  {/* <div className="comments-area">
                      <h4>3 Comments</h4>
                      {list.map((obj) => <CommentList key={obj.text} {...obj} />)}
                   </div>
 
-                  <BlogForm />
+                  <BlogForm /> */}
+                  <div className="social-share pt-30">
+                     <div className="section-tittle">
+                        <h3 className="mr-20">Share:</h3>
+                        <ul>
+                           <li><a href="#"><img src={icon_ins} alt="" /></a></li>
+                           <li><a href="#"><img src={icon_fb} alt="" /></a></li>
+                           <li><a href="#"><img src={icon_tw} alt="" /></a></li>
+                           <li><a href="#"><img src={icon_yo} alt="" /></a></li>
+                        </ul>
+                     </div>
+                  </div>
 
                </div>
 
