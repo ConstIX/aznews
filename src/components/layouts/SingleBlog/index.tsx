@@ -67,7 +67,6 @@ const SingleBlog: React.FC = () => {
                   <div className="blog_right_sidebar">
                      <PostWidget />
                      <PopularWidget />
-                     <NewsWidget />
                   </div>
                </div>
 
