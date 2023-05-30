@@ -1,6 +1,7 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
-import trending_top from '../../assets/img/trending/trending_top.jpg'
 import icon_ins from '../../assets/img/news/icon-ins.png'
 import icon_fb from '../../assets/img/news/icon-fb.png'
 import icon_tw from '../../assets/img/news/icon-tw.png'
@@ -9,7 +10,30 @@ import icon_yo from '../../assets/img/news/icon-yo.png'
 import Trending from '../pages/About/Trending'
 import FollowUs from '../pages/Category/FollowUs'
 
+type TrendingState = {
+   img_url: any,
+   title: string,
+   content: string
+}
+
 const Details: React.FC = () => {
+
+   const [trendingNews, setTrendingNews] = React.useState<TrendingState[]>([])
+   const { homeId } = useParams()
+
+   React.useEffect(() => {
+      async function fetchTrendingNews() {
+         try {
+            const res = await axios.get(`https://646d04c77b42c06c3b2c6d6e.mockapi.io/home/` + homeId)
+            const data = res.data
+            setTrendingNews(data)
+         } catch (eror) {
+            alert('EROR!!!')
+         }
+      }
+      fetchTrendingNews()
+   }, [])
+
    return (
       <div className="about-area">
          <div className="container">
@@ -19,23 +43,13 @@ const Details: React.FC = () => {
                <div className="col-lg-8">
                   <div className="about-right mb-30">
                      <div className="about-img">
-                        <img src={trending_top} alt="" />
+                        <img src={trendingNews.image_url} alt="" />
                      </div>
                      <div className="section-tittle mb-30 pt-30">
-                        <h3>Here come the moms in space</h3>
+                        <h3>{trendingNews.title}</h3>
                      </div>
                      <div className="about-prea">
-                        <p className="about-pera1 mb-25">
-                           My hero when I was a kid was my mom. Same for everyone I knew. Moms are untouchable. They’re
-                           elegant, smart, beautiful, kind…everything we want to be. At 29 years old, my favorite
-                           compliment is being told that I look like my mom. Seeing myself in her image, like this
-                           daughter up top, makes me so proud of how far I’ve come, and so thankful for where I come
-                           from.
-                           the refractor telescope uses a convex lens to focus the light on the eyepiece.
-                           The reflector telescope has a concave lens which means it telescope sits on. The mount is the
-                           actual tripod and the wedge is the device that lets you attach the telescope to the mount.
-                           Moms are like…buttons? Moms are like glue. Moms are like pizza crusts. Moms are the ones who
-                           make sure things happen—from birth to school lunch.</p>
+                        <p className="about-pera1 mb-25">{trendingNews.content}</p>
                      </div>
                      <div className="social-share pt-30">
                         <div className="section-tittle">

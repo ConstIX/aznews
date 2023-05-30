@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 type TypeRightNews = {
+   id: string,
    image_url: string,
    title: string
 }

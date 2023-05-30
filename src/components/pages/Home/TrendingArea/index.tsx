@@ -11,6 +11,7 @@ import SkeletonTop from './TrendingTop/SkeletonTop'
 import SkeletonRight from './TrendingRight/SkeletonRight'
 import SkeletonBottom from './TrendingBottom/SkeletonBottom'
 
+
 const TrendingArea: React.FC = () => {
 
    const { rightNews, status } = useAppSelector(state => state.rightNewsReducer)

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-type TrendingBottomProps = { image_url: string, title: string }
+type TrendingBottomProps = { id: string, image_url: string, title: string }
 
-const TrendingBottom: React.FC<TrendingBottomProps> = ({ image_url, title }) => {
+const TrendingBottom: React.FC<TrendingBottomProps> = ({ id, image_url, title }) => {
    return (
       <div className="col-lg-4">
          <div className="single-bottom mb-35">
@@ -11,7 +11,7 @@ const TrendingBottom: React.FC<TrendingBottomProps> = ({ image_url, title }) => 
                <img src={image_url} alt="" />
             </div>
             <div className="trend-bottom-cap">
-               <h4><Link to="/details">{title}</Link></h4>
+               <h4><Link to={`/details/${id}`}>{title}</Link></h4>
             </div>
          </div>
       </div>

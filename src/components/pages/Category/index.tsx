@@ -5,7 +5,6 @@ import whatNews2 from '../../../assets/img/news/whatNews2.jpg'
 import whatNews3 from '../../../assets/img/news/whatNews3.jpg'
 import whatNews4 from '../../../assets/img/news/whatNews4.jpg'
 
-import CategoryPagination from './CategoryPagination'
 import FollowUs from './FollowUs'
 
 const Category: React.FC = () => {
@@ -367,7 +366,6 @@ const Category: React.FC = () => {
             </div>
          </div>
 
-         <CategoryPagination />
       </>
    )
 }

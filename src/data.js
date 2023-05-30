@@ -57,11 +57,6 @@ export const video = [
 import recent1 from './assets/img/news/recent1.jpg'
 import recent2 from './assets/img/news/recent2.jpg'
 import recent3 from './assets/img/news/recent3.jpg'
-
-
-import weeklyNews3 from './assets/img/news/weeklyNews3.jpg'
-import weeklyNews2 from './assets/img/news/weeklyNews2.jpg'
-import weeklyNews1 from './assets/img/news/weeklyNews1.jpg'
 import weekly2News1 from './assets/img/news/weekly2News1.jpg'
 import weekly2News2 from './assets/img/news/weekly2News2.jpg'
 import weekly2News3 from './assets/img/news/weekly2News3.jpg'
@@ -71,12 +66,6 @@ export const recent = [
    { image: recent2, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
    { image: recent3, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
    { image: recent3, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-]
-export const news = [
-   { image: weeklyNews3, title: 'Strike', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { image: weeklyNews2, title: 'Concert', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { image: weeklyNews1, title: 'Sea', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { image: weeklyNews1, title: 'Beach', text: 'Welcome To The Best Model Winner Contest', link: '#' }
 ]
 export const newsTop = [
    { date: '25 Jan 2020', image: weekly2News1, title: 'Strike', text: 'Welcome To The Best Model Winner Contest', link: '#' },
@@ -110,3 +99,4 @@ export const newsTop = [
 //       date: 'December 4, 2017 at 3:12 pm'
 //    }
 // ]
+
