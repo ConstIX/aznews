@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 import icon_ins from '../../../assets/img/news/icon-ins.png'
 import icon_fb from '../../../assets/img/news/icon-fb.png'
@@ -8,7 +9,6 @@ import icon_yo from '../../../assets/img/news/icon-yo.png'
 import PopularWidget from '../../pages/Blog/Widgets/PopularWidget'
 import PostWidget from '../../pages/Blog/Widgets/PostWidget'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
 
 type SingleBlogState = {
    image_url: string,
@@ -24,7 +24,7 @@ const SingleBlog: React.FC = () => {
    React.useEffect(() => {
       async function fetchSingleNews() {
          try {
-            const res = await axios.get(`https://646d04c77b42c06c3b2c6d6e.mockapi.io/items/` + pubDate)
+            const res = await axios.get(`https://646d04c77b42c06c3b2c6d6e.mockapi.io/blog/` + pubDate)
             const data = res.data
             setSingleNews(data)
          } catch (eror) {

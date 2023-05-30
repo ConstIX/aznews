@@ -8,7 +8,20 @@ import WeeklyNews from './WeeklyNews'
 import WeeklyTopNews from './WeeklyTopNews'
 import RecentArticles from './RecentArticles'
 
+import { useAppDispatch } from '../../redux/store'
+import { fetchRightNews } from '../../redux/slices/rightNewsSlice'
+
 const Home: React.FC = () => {
+
+   const dispatch = useAppDispatch()
+
+   React.useEffect(() => {
+      const getNews = async () => {
+         dispatch(fetchRightNews())
+      }
+      getNews()
+   }, [])
+
    return (
       <main>
 

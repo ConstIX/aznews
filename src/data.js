@@ -11,24 +11,24 @@ export const popular = [
    { image: post_3, title: 'Astronomy Or Astrology', date: '2 Hours ago', link: '/single' },
    { image: post_4, title: 'Asteroids telescope', date: '3 Hours ago', link: '/single' }
 ]
-export const tag = [
-   { title: 'project', link: '#' },
-   { title: 'love', link: '#' },
-   { title: 'technology', link: '#' },
-   { title: 'travel', link: '#' },
-   { title: 'restaurant', link: '#' },
-   { title: 'life style', link: '#' },
-   { title: 'design', link: '#' },
-   { title: 'illustration', link: '#' }
-]
-export const single = [
-   { image: post_1, link: '#' },
-   { image: post_2, link: '#' },
-   { image: post_3, link: '#' },
-   { image: post_4, link: '#' },
-   { image: post_1, link: '#' },
-   { image: post_2, link: '#' },
-]
+// export const tag = [
+//    { title: 'project', link: '#' },
+//    { title: 'love', link: '#' },
+//    { title: 'technology', link: '#' },
+//    { title: 'travel', link: '#' },
+//    { title: 'restaurant', link: '#' },
+//    { title: 'life style', link: '#' },
+//    { title: 'design', link: '#' },
+//    { title: 'illustration', link: '#' }
+// ]
+// export const single = [
+//    { image: post_1, link: '#' },
+//    { image: post_2, link: '#' },
+//    { image: post_3, link: '#' },
+//    { image: post_4, link: '#' },
+//    { image: post_1, link: '#' },
+//    { image: post_2, link: '#' },
+// ]
 export const post = [
    { title: 'Resaurant food', num: '(37)', link: '#' },
    { title: 'Travel news', num: '(10)', link: '#' },
@@ -57,9 +57,7 @@ export const video = [
 import recent1 from './assets/img/news/recent1.jpg'
 import recent2 from './assets/img/news/recent2.jpg'
 import recent3 from './assets/img/news/recent3.jpg'
-import bottom1 from './assets/img/trending/trending_bottom1.jpg'
-import bottom2 from './assets/img/trending/trending_bottom2.jpg'
-import bottom3 from './assets/img/trending/trending_bottom3.jpg'
+
 
 import weeklyNews3 from './assets/img/news/weeklyNews3.jpg'
 import weeklyNews2 from './assets/img/news/weeklyNews2.jpg'
@@ -73,11 +71,6 @@ export const recent = [
    { image: recent2, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
    { image: recent3, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
    { image: recent3, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-]
-export const trendBottom = [
-   { color: 'color1', image: bottom1, title: 'Lifestyple', text: 'Get the Illusion of Fuller Lashes by “Mascng.”' },
-   { color: 'color2', image: bottom2, title: 'Sports', text: 'Get the Illusion of Fuller Lashes by “Mascng.”' },
-   { color: 'color3', image: bottom3, title: 'Travels', text: ' Welcome To The Best Model Winner Contest' }
 ]
 export const news = [
    { image: weeklyNews3, title: 'Strike', text: 'Welcome To The Best Model Winner Contest', link: '#' },
@@ -94,26 +87,26 @@ export const newsTop = [
 ]
 
 // SingleBlog
-import avatar1 from './assets/img/comment/comment_1.png'
-import avatar2 from './assets/img/comment/comment_2.png'
-import avatar3 from './assets/img/comment/comment_3.png'
-export const list = [
-   {
-      avatar: avatar1,
-      text: 'Multiply sea night fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser',
-      user: 'Life Style',
-      date: 'December 4, 2017 at 3:12 pm'
-   },
-   {
-      avatar: avatar2,
-      text: 'Multiply fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser',
-      user: 'Ilon Mask',
-      date: 'December 4, 2017 at 3:12 pm'
-   },
-   {
-      avatar: avatar3,
-      text: 'Multiply sea night grass forule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser',
-      user: 'Emilly Blunt',
-      date: 'December 4, 2017 at 3:12 pm'
-   }
-]
+// import avatar1 from './assets/img/comment/comment_1.png'
+// import avatar2 from './assets/img/comment/comment_2.png'
+// import avatar3 from './assets/img/comment/comment_3.png'
+// export const list = [
+//    {
+//       avatar: avatar1,
+//       text: 'Multiply sea night fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser',
+//       user: 'Life Style',
+//       date: 'December 4, 2017 at 3:12 pm'
+//    },
+//    {
+//       avatar: avatar2,
+//       text: 'Multiply fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser',
+//       user: 'Ilon Mask',
+//       date: 'December 4, 2017 at 3:12 pm'
+//    },
+//    {
+//       avatar: avatar3,
+//       text: 'Multiply sea night grass forule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser',
+//       user: 'Emilly Blunt',
+//       date: 'December 4, 2017 at 3:12 pm'
+//    }
+// ]

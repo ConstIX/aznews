@@ -15,7 +15,7 @@ interface InterfaceBlog {
 
 export const fetchBlog = createAsyncThunk('pizza/fetchBlogStatus', async (params: Record<string, string>) => {
    const { newsSearch, page } = params
-   const res = await axios.get(`https://646d04c77b42c06c3b2c6d6e.mockapi.io/items?page=${page}&limit=2&${newsSearch}`)
+   const res = await axios.get(`https://646d04c77b42c06c3b2c6d6e.mockapi.io/blog?page=${page}&limit=2&${newsSearch}`)
    return res.data as TypeBlog[]
 })
 

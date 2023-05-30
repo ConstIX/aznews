@@ -3,7 +3,6 @@ import axios from 'axios'
 
 type TypeRightNews = {
    image_url: string,
-   link: string,
    title: string
 }
 interface InterfaceRightNews {
@@ -11,12 +10,11 @@ interface InterfaceRightNews {
    status: string
 }
 
-export const fetchRightNews = createAsyncThunk('pizza/NewsStatus', async () => {
-   const res = await axios.get(`https://newsdata.io/api/1/news?country=uz&apikey=pub_225990e2bfdf029519a51c8174634c7ab512e`)
-   const data = res.data.results
-   return data.slice(data.length - 6) as TypeRightNews[]
+export const fetchRightNews = createAsyncThunk('news/NewsStatus', async () => {
+   const res = await axios.get(`https://646d04c77b42c06c3b2c6d6e.mockapi.io/home`)
+   const data = res.data
+   return data as TypeRightNews[]
 })
-
 
 const initialState: InterfaceRightNews = {
    rightNews: [],
