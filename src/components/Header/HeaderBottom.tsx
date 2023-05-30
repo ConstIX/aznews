@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import logo from '../../../assets/img/logo/logo.png'
-import { useAppDispatch, useAppSelector } from '../../redux/store'
-import { setSearch } from '../../redux/slices/filterSlice'
+import logo from '../../assets/img/logo/logo.png'
+import { useAppDispatch, useAppSelector } from '../redux/store'
+import { setSearch } from '../redux/slices/filterSlice'
 
 const headerNav = [
    { link: '/', name: 'Home' },

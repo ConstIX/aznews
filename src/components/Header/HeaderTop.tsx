@@ -1,7 +1,7 @@
 import React from 'react'
 
-import header_icon1 from '../../../assets/img/icon/header_icon1.png'
-import header_icon2 from '../../../assets/img/icon/header_icon2.png'
+import header_icon1 from '../../assets/img/icon/header_icon1.png'
+import header_icon2 from '../../assets/img/icon/header_icon2.png'
 
 const HeaderTop: React.FC = () => {
    return (

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import logo from '../../../assets/img/logo/logo.png'
-import header_card from '../../../assets/img/hero/header_card.jpg'
+import logo from '../../assets/img/logo/logo.png'
+import header_card from '../../assets/img/hero/header_card.jpg'
 
 const HeaderMid: React.FC = () => {
    return (
