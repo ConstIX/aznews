@@ -1,15 +1,15 @@
 import React from "react"
 import ContentLoader from "react-content-loader"
 
-const WeeklySkeleton: React.FC = () => (
+const RecentSkeleton: React.FC = () => (
    <ContentLoader
       speed={2}
       width={262}
-      height={306}
-      viewBox="0 0 262 306"
+      height={244}
+      viewBox="0 0 262 244"
       backgroundColor="#f3f3f3"
       foregroundColor="#ecebeb"
-      className="weekly-single"
+      className="single-recent mb-100"
    >
       <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
       <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
@@ -17,8 +17,8 @@ const WeeklySkeleton: React.FC = () => (
       <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
       <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
       <circle cx="20" cy="20" r="20" />
-      <rect x="0" y="0" rx="6" ry="6" width="262" height="306" />
+      <rect x="0" y="0" rx="6" ry="6" width="262" height="244" />
    </ContentLoader>
 )
 
-export default WeeklySkeleton
+export default RecentSkeleton

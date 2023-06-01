@@ -53,28 +53,6 @@ export const video = [
    "https://www.youtube.com/embed/0VxlQlacWV4"
 ]
 
-// Home
-import recent1 from './assets/img/news/recent1.jpg'
-import recent2 from './assets/img/news/recent2.jpg'
-import recent3 from './assets/img/news/recent3.jpg'
-import weekly2News1 from './assets/img/news/weekly2News1.jpg'
-import weekly2News2 from './assets/img/news/weekly2News2.jpg'
-import weekly2News3 from './assets/img/news/weekly2News3.jpg'
-import weekly2News4 from './assets/img/news/weekly2News4.jpg'
-export const recent = [
-   { image: recent1, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { image: recent2, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { image: recent3, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { image: recent3, title: 'Night party', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-]
-export const newsTop = [
-   { date: '25 Jan 2020', image: weekly2News1, title: 'Strike', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { date: '25 Jan 2020', image: weekly2News2, title: 'Concert', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { date: '25 Jan 2020', image: weekly2News3, title: 'Sea', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { date: '25 Jan 2020', image: weekly2News4, title: 'Event Night', text: 'Welcome To The Best Model Winner Contest', link: '#' },
-   { date: '25 Jan 2020', image: weekly2News4, title: 'Corporate', text: 'Welcome To The Best Model Winner Contest', link: '#' }
-]
-
 // SingleBlog
 // import avatar1 from './assets/img/comment/comment_1.png'
 // import avatar2 from './assets/img/comment/comment_2.png'

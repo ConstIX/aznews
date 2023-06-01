@@ -4,7 +4,8 @@ import axios from 'axios'
 type TypeRightNews = {
    id: string,
    image_url: string,
-   title: string
+   title: string,
+   pubDate: string
 }
 interface InterfaceRightNews {
    rightNews: TypeRightNews[],

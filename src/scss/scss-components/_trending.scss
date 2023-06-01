@@ -72,9 +72,10 @@
 
                img {
                   max-width: 100%;
-                  width: 100%;
+                  width: 236px;
                   height: 150px;
                   border-radius: 5px;
+                  object-fit: cover;
                   transform: scale(1);
                   transition: all 0.5s ease-out 0s;
                }
@@ -130,9 +131,10 @@
 
             img {
                max-width: 100%;
-               width: 100%;
+               width: 111px;
                height: 80px;
                border-radius: 6px;
+               object-fit: cover;
             }
          }
 

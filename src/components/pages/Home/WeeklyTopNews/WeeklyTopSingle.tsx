@@ -1,17 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-type WeeklyTopSingleProps = { image: any, title: string, date: string, text: string, link: string }
+type WeeklyTopSingleProps = { id: string, image_url: any, title: string, pubDate: string }
 
-const WeeklyTopSingle: React.FC<WeeklyTopSingleProps> = ({ image, title, date, text, link }) => {
+const WeeklyTopSingle: React.FC<WeeklyTopSingleProps> = ({ id, image_url, title, pubDate }) => {
    return (
       <div className="weekly2-single">
          <div className="weekly2-img">
-            <img src={image} alt="" />
+            <img src={image_url} alt="" />
          </div>
          <div className="weekly2-caption">
-            <span className="color1">{title}</span>
-            <p>{date}</p>
-            <h4><a href={link}>{text}</a></h4>
+            <p>{pubDate}</p>
+            <h4><Link to={`/details/${id}`}>{title}</Link></h4>
          </div>
       </div>
    )

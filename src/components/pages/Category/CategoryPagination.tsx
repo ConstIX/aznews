@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RecentPagination: React.FC = () => {
+const CategoryPagination: React.FC = () => {
    return (
       <div className="pagination-area pb-45 text-center">
          <div className="container">
@@ -22,4 +22,4 @@ const RecentPagination: React.FC = () => {
    )
 }
 
-export default RecentPagination
+export default CategoryPagination

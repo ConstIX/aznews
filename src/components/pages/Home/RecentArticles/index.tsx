@@ -1,11 +1,22 @@
 import React from 'react'
-import { recent } from '../../../../data'
+import { useAppSelector } from '../../../redux/store'
 
-import RecentPagination from './RecentPagination'
+import RecentSkeleton from './RecentSkeleton'
 import SingleRecent from './SingleRecent'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Scrollbar, Mousewheel } from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 
 const RecentArticles: React.FC = () => {
+
+   const { rightNews, status } = useAppSelector(state => state.rightNewsReducer)
+   const newsRecent = rightNews.slice(15, 20)
+
    return (
       <>
          <div className="recent-articles">
@@ -22,15 +33,25 @@ const RecentArticles: React.FC = () => {
                   <div className="row">
                      <div className="col-12">
                         <div className="recent-active dot-style d-flex dot-style">
-                           {recent.map((obj, index) => <SingleRecent key={index} {...obj} />)}
+                           {status === 'loading' ? [...new Array(4)].map((_, index) => <RecentSkeleton key={index} />) :
+                              <Swiper
+                                 modules={[Navigation, Mousewheel, Scrollbar]}
+                                 spaceBetween={0}
+                                 slidesPerView={4}
+                                 navigation
+                                 scrollbar={{ draggable: true }}
+                                 mousewheel={{ invert: true }}
+                                 className="recent-swiper"
+                              >
+                                 {newsRecent.map(obj => <SwiperSlide key={obj.title}><SingleRecent {...obj} /></SwiperSlide>)}
+                              </Swiper>
+                           }
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-
-         <RecentPagination />
       </>
    )
 }

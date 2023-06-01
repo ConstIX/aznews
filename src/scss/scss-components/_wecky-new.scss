@@ -11,11 +11,14 @@
 
          .weekly-img {
 
+
             img {
                max-width: 100%;
+               height: 300px;
                width: 262px;
-               height: 306px;
                border-radius: 6px;
+               object-fit: cover;
+               object-position: center;
             }
          }
 
@@ -79,6 +82,19 @@
                visibility: visible;
                bottom: 20px;
             }
+         }
+      }
+
+      .weekly-swiper {
+
+         .swiper-button-prev {
+            color: rgb(255, 255, 255);
+            margin-left: 15px;
+         }
+
+         .swiper-button-next {
+            color: rgb(255, 255, 255);
+            margin-right: 15px;
          }
       }
    }

@@ -1,16 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-type SingleRecentProps = { image: any, title: string, text: string, link: string }
+type SingleRecentProps = { image_url: any, title: string, id: string }
 
-const SingleRecent: React.FC<SingleRecentProps> = ({ image, title, text, link }) => {
+const SingleRecent: React.FC<SingleRecentProps> = ({ image_url, title, id }) => {
    return (
       <div className="single-recent mb-100">
          <div className="what-img">
-            <img src={image} alt="" />
+            <img src={image_url} alt="" />
          </div>
          <div className="what-cap">
-            <span className="color1">{title}</span>
-            <h4><a href={link}>{text}</a></h4>
+            <h4><Link to={`/details/${id}`}>{title}</Link></h4>
          </div>
       </div>
    )
