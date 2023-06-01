@@ -15,7 +15,7 @@ import 'swiper/css/navigation';
 const RecentArticles: React.FC = () => {
 
    const { rightNews, status } = useAppSelector(state => state.rightNewsReducer)
-   const newsRecent = rightNews.slice(15, 20)
+   const newsRecent = rightNews.slice(20, 25)
 
    return (
       <>
