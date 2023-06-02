@@ -11,24 +11,6 @@ export const popular = [
    { image: post_3, title: 'Astronomy Or Astrology', date: '2 Hours ago', link: '/single' },
    { image: post_4, title: 'Asteroids telescope', date: '3 Hours ago', link: '/single' }
 ]
-// export const tag = [
-//    { title: 'project', link: '#' },
-//    { title: 'love', link: '#' },
-//    { title: 'technology', link: '#' },
-//    { title: 'travel', link: '#' },
-//    { title: 'restaurant', link: '#' },
-//    { title: 'life style', link: '#' },
-//    { title: 'design', link: '#' },
-//    { title: 'illustration', link: '#' }
-// ]
-// export const single = [
-//    { image: post_1, link: '#' },
-//    { image: post_2, link: '#' },
-//    { image: post_3, link: '#' },
-//    { image: post_4, link: '#' },
-//    { image: post_1, link: '#' },
-//    { image: post_2, link: '#' },
-// ]
 export const post = [
    { title: 'Resaurant food', num: '(37)', link: '#' },
    { title: 'Travel news', num: '(10)', link: '#' },
@@ -36,21 +18,6 @@ export const post = [
    { title: 'Product', num: '(11)', link: '#' },
    { title: 'Inspiration', num: '(21)', link: '#' },
    { title: 'Health Care', num: '(9)', link: '#' }
-]
-
-// LatestNews
-export const videoInfo = [
-   { title: "Welcotme To The Best Model Winner Contest", link: "https://www.youtube.com/embed/CicQIuG8hBo" },
-   { title: "Welcotme To The Best Model Winner Contest", link: "https://www.youtube.com/embed/rIz00N40bag" },
-   { title: "Welcotme To The Best Model Winner Contest", link: "https://www.youtube.com/embed/CONfhrASy44" },
-   { title: "Welcotme To The Best Model Winner Contest", link: "https://www.youtube.com/embed/lq6fL2ROWf8" },
-   { title: "Welcotme To The Best Model Winner Contest", link: "https://www.youtube.com/embed/0VxlQlacWV4" }
-]
-export const video = [
-   "https://www.youtube.com/embed/CicQIuG8hBo",
-   "https://www.youtube.com/embed/rIz00N40bag",
-   "https://www.youtube.com/embed/lq6fL2ROWf8",
-   "https://www.youtube.com/embed/0VxlQlacWV4"
 ]
 
 // SingleBlog

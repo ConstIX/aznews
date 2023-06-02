@@ -5,12 +5,14 @@ import type { TypedUseSelectorHook } from 'react-redux'
 import rightNewsReducer from './slices/rightNewsSlice'
 import blogReducer from './slices/blogSlice'
 import filterReducer from './slices/filterSlice'
+import videoReducer from './slices/videoSlice'
 
 export const store = configureStore({
    reducer: {
       rightNewsReducer,
       blogReducer,
-      filterReducer
+      filterReducer,
+      videoReducer
    },
 })
 
