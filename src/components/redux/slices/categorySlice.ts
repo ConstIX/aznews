@@ -12,9 +12,9 @@ interface InterfaceCategory {
    status: string
 }
 
-export const fetchCategory = createAsyncThunk('category/fetchCategoryStatus', async () => {
-   // const { newsSearch, page } = params
-   const res = await axios.get(`https://6478e0e5362560649a2e9596.mockapi.io/category`)
+export const fetchCategory = createAsyncThunk('category/fetchCategoryStatus', async (params: Record<string, string>) => {
+   const { category, categoryPage } = params
+   const res = await axios.get(`https://6478e0e5362560649a2e9596.mockapi.io/catnews?page=${categoryPage}&limit=4&${category}`)
    return res.data as TypeCategory[]
 })
 

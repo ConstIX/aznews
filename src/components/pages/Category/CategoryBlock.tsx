@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import whatNews1 from '../../../assets/img/news/whatNews1.jpg'
-import whatNews2 from '../../../assets/img/news/whatNews2.jpg'
-import whatNews3 from '../../../assets/img/news/whatNews3.jpg'
-import whatNews4 from '../../../assets/img/news/whatNews4.jpg'
-
-const CategoryBlock = () => {
+type CategoryBlockProps = {
+   id: string,
+   image_url: any,
+   title: string
+}
+const CategoryBlock: React.FC<CategoryBlockProps> = ({ id, image_url, title }) => {
    return (
       <div className="col-lg-6 col-md-6">
          <div className="single-what-news mb-100">
             <div className="what-img">
-               <img src={whatNews1} alt="" />
+               <img src={image_url} alt="" />
             </div>
             <div className="what-cap">
-               <h4><Link to="#">Welcome To The Best Model Winner Contest</Link></h4>
+               <h4><Link to="#">{title}</Link></h4>
             </div>
          </div>
       </div>
