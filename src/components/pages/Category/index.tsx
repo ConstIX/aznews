@@ -1,17 +1,30 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import { fetchCategory } from '../../redux/slices/categorySlice'
+import { useAppDispatch, useAppSelector } from '../../redux/store'
 
-import whatNews1 from '../../../assets/img/news/whatNews1.jpg'
-import whatNews2 from '../../../assets/img/news/whatNews2.jpg'
-import whatNews3 from '../../../assets/img/news/whatNews3.jpg'
-import whatNews4 from '../../../assets/img/news/whatNews4.jpg'
+// import whatNews1 from '../../../assets/img/news/whatNews1.jpg'
+// import whatNews2 from '../../../assets/img/news/whatNews2.jpg'
+// import whatNews3 from '../../../assets/img/news/whatNews3.jpg'
+// import whatNews4 from '../../../assets/img/news/whatNews4.jpg'
 
+import Categories from './Categories'
+import CategoryBlock from './CategoryBlock'
 import CategoryPagination from './CategoryPagination'
 import FollowUs from './FollowUs'
 
 const Category: React.FC = () => {
 
    const { pathname } = useLocation()
+   const dispatch = useAppDispatch()
+   const { category, status } = useAppSelector(state => state.categoryReducer)
+
+   React.useEffect(() => {
+      const getCategory = async () => {
+         dispatch(fetchCategory())
+      }
+      getCategory()
+   }, [])
 
    return (
       <>
@@ -26,26 +39,7 @@ const Category: React.FC = () => {
                            </div>
                         </div>
                         <div className="col-lg-9 col-md-9">
-                           <div className="properties__button">
-
-                              <nav>
-                                 <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a className="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
-                                       href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All</a>
-                                    <a className="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
-                                       role="tab" aria-controls="nav-profile" aria-selected="false">Lifestyle</a>
-                                    <a className="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
-                                       role="tab" aria-controls="nav-contact" aria-selected="false">Travel</a>
-                                    <a className="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last"
-                                       role="tab" aria-controls="nav-contact" aria-selected="false">Fashion</a>
-                                    <a className="nav-item nav-link" id="nav-Sports" data-toggle="tab" href="#nav-nav-Sport"
-                                       role="tab" aria-controls="nav-contact" aria-selected="false">Sports</a>
-                                    <a className="nav-item nav-link" id="nav-technology" data-toggle="tab" href="#nav-techno"
-                                       role="tab" aria-controls="nav-contact" aria-selected="false">Technology</a>
-                                 </div>
-                              </nav>
-
-                           </div>
+                           <Categories />
                         </div>
                      </div>
                      <div className="row">
@@ -53,7 +47,7 @@ const Category: React.FC = () => {
 
                            <div className="tab-content" id="nav-tabContent">
 
-                              <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                              {/* <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                  <div className="whats-news-caption">
                                     <div className="row">
                                        <div className="col-lg-6 col-md-6">
@@ -357,7 +351,14 @@ const Category: React.FC = () => {
                                        </div>
                                     </div>
                                  </div>
+                              </div> */}
+
+                              <div className="tab-pane fade show active">
+                                 <div className="row">
+                                    <CategoryBlock />
+                                 </div>
                               </div>
+
 
                            </div>
 

@@ -16,6 +16,7 @@ import SingleBlog from "./components/layouts/SingleBlog"
 import { useAppDispatch } from "./components/redux/store"
 import { fetchVideo } from "./components/redux/slices/videoSlice"
 import { fetchRightNews } from "./components/redux/slices/rightNewsSlice"
+import { fetchCategory } from "./components/redux/slices/categorySlice"
 
 function App() {
 
@@ -26,10 +27,14 @@ function App() {
    const getNews = async () => {
       dispatch(fetchRightNews())
    }
+   // const getCategory = async () => {
+   //    dispatch(fetchCategory())
+   // }
 
    React.useEffect(() => {
       getNews()
       getVideo()
+      // getCategory()
    }, [])
 
    return (

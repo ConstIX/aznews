@@ -6,13 +6,15 @@ import rightNewsReducer from './slices/rightNewsSlice'
 import blogReducer from './slices/blogSlice'
 import filterReducer from './slices/filterSlice'
 import videoReducer from './slices/videoSlice'
+import categoryReducer from './slices/categorySlice'
 
 export const store = configureStore({
    reducer: {
       rightNewsReducer,
       blogReducer,
       filterReducer,
-      videoReducer
+      videoReducer,
+      categoryReducer
    },
 })
 
