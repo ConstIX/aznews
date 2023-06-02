@@ -14,7 +14,7 @@ const CategoryBlock: React.FC<CategoryBlockProps> = ({ id, image_url, title }) =
                <img src={image_url} alt="" />
             </div>
             <div className="what-cap">
-               <h4><Link to="#">{title}</Link></h4>
+               <h4><Link to={`/category-details/${id}`}>{title}</Link></h4>
             </div>
          </div>
       </div>

@@ -12,6 +12,7 @@ import Contact from "./components/pages/Contact"
 import Blog from "./components/pages/Blog"
 import Footer from "./components/Footer"
 import SingleBlog from "./components/layouts/SingleBlog"
+import CategoryDetails from "./components/layouts/CategoryDetails"
 
 import { useAppDispatch } from "./components/redux/store"
 import { fetchVideo } from "./components/redux/slices/videoSlice"
@@ -45,6 +46,7 @@ function App() {
             <Route path='/blog' element={<Blog />} />
             <Route path='/details/:homeId' element={<Details />} />
             <Route path='/single/:pubDate' element={<SingleBlog />} />
+            <Route path='/category-details/:id' element={<CategoryDetails />} />
          </Routes>
 
          <Footer />

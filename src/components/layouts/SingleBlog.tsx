@@ -1,13 +1,13 @@
 import React from 'react'
 import axios from 'axios'
 
-import icon_ins from '../../../assets/img/news/icon-ins.png'
-import icon_fb from '../../../assets/img/news/icon-fb.png'
-import icon_tw from '../../../assets/img/news/icon-tw.png'
-import icon_yo from '../../../assets/img/news/icon-yo.png'
+import icon_ins from '../../assets/img/news/icon-ins.png'
+import icon_fb from '../../assets/img/news/icon-fb.png'
+import icon_tw from '../../assets/img/news/icon-tw.png'
+import icon_yo from '../../assets/img/news/icon-yo.png'
 
-import PopularWidget from '../../pages/Blog/Widgets/PopularWidget'
-import PostWidget from '../../pages/Blog/Widgets/PostWidget'
+import PopularWidget from '../pages/Blog/Widgets/PopularWidget'
+import PostWidget from '../pages/Blog/Widgets/PostWidget'
 import { useParams } from 'react-router-dom'
 
 type SingleBlogState = {
@@ -55,12 +55,6 @@ const SingleBlog: React.FC = () => {
                      </div>
                   </div>
 
-                  {/* <div className="comments-area">
-                     <h4>3 Comments</h4>
-                     {list.map((obj) => <CommentList key={obj.text} {...obj} />)}
-                  </div>
-
-                  <BlogForm /> */}
                   <div className="social-share pt-30">
                      <div className="section-tittle">
                         <h3 className="mr-20">Share:</h3>

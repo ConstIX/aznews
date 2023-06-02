@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from '../../redux/store'
 import Categories from './Categories'
 import CategoryBlock from './CategoryBlock'
 import CategoryPagination from './CategoryPagination'
+import CategorySkeleton from './CategorySkeleton'
 import FollowUs from './FollowUs'
 
 const Category: React.FC = () => {
@@ -46,7 +47,7 @@ const Category: React.FC = () => {
                            <div className="tab-content" id="nav-tabContent">
                               <div className="tab-pane fade show active">
                                  <div className="row">
-                                    {category.map(obj => <CategoryBlock {...obj} key={obj.title} />)}
+                                    {status === 'loading' ? [...new Array(4)].map((_, index) => <CategorySkeleton key={index} />) : category.map(obj => <CategoryBlock {...obj} key={obj.title} />)}
                                  </div>
                               </div>
                            </div>
