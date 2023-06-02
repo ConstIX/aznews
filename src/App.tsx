@@ -13,7 +13,24 @@ import Blog from "./components/pages/Blog"
 import Footer from "./components/Footer"
 import SingleBlog from "./components/layouts/SingleBlog"
 
+import { useAppDispatch } from "./components/redux/store"
+import { fetchVideo } from "./components/redux/slices/videoSlice"
+import { fetchRightNews } from "./components/redux/slices/rightNewsSlice"
+
 function App() {
+
+   const dispatch = useAppDispatch()
+   const getVideo = async () => {
+      dispatch(fetchVideo())
+   }
+   const getNews = async () => {
+      dispatch(fetchRightNews())
+   }
+
+   React.useEffect(() => {
+      getNews()
+      getVideo()
+   }, [])
 
    return (
       <>
