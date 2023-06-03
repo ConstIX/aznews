@@ -8,7 +8,10 @@
       .what-img {
          img {
             border-radius: 6px;
-            width: 100%;
+            max-width: 100%;
+            width: 370px;
+            height: 250px;
+            object-fit: cover;
          }
       }
 
@@ -18,7 +21,7 @@
          position: absolute;
          bottom: -63px;
          left: 0;
-         width: 80%;
+         width: 90%;
          border-radius: 0 7px 0 0;
          @include transition(.4s);
 

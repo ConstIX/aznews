@@ -2,15 +2,15 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface InterfaceFilter {
    categoryId: number,
-   search: string,
    categoryPage: number,
+   search: string,
    page: number
 }
 
 const initialState: InterfaceFilter = {
    categoryId: 0,
-   search: '',
    categoryPage: 1,
+   search: '',
    page: 1
 }
 

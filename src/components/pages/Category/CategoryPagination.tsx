@@ -17,8 +17,8 @@ const CategoryPagination: React.FC = () => {
                         <ul className="pagination justify-content-start">
 
                            <li onClick={() => dispatch(setCategorryPage(categoryPage - 1))} className={`page-link ${categoryPage === 1 ? 'invisible' : ''}`}><span className="flaticon-arrow roted"></span></li>
-                           {[...Array(2)].map((_, index) => <li onClick={() => dispatch(setCategorryPage(index + 1))} key={index} className={`page-link ${categoryPage === index + 1 ? 'active' : ''}`}>{index + 1}</li>)}
-                           <li onClick={() => dispatch(setCategorryPage(categoryPage + 1))} className={`page-link ${categoryPage === 2 ? 'invisible' : ''}`}><span className="flaticon-arrow "></span></li>
+                           {[...Array(5)].map((_, index) => <li onClick={() => dispatch(setCategorryPage(index + 1))} key={index} className={`page-link ${categoryPage === index + 1 ? 'active' : ''}`}>{index + 1}</li>)}
+                           <li onClick={() => dispatch(setCategorryPage(categoryPage + 1))} className={`page-link ${categoryPage === 5 ? 'invisible' : ''}`}><span className="flaticon-arrow "></span></li>
 
                         </ul>
                      </nav>
