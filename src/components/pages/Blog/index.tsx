@@ -14,15 +14,16 @@ const Blog: React.FC = () => {
 
    const dispatch = useAppDispatch()
    const { blog, status } = useAppSelector(state => state.blogReducer)
-   const { search, page } = useAppSelector(state => state.filterReducer)
+   const { search, page, blogCategory } = useAppSelector(state => state.filterReducer)
 
    const getBlog = async () => {
+      const category = (blogCategory > 0 ? `category=${blogCategory} ` : '').replace(/ /g, '')
       const newsSearch = (search ? `search=${search} ` : '')
-      dispatch(fetchBlog({ newsSearch, page: String(page) }))
+      dispatch(fetchBlog({ category, newsSearch, page: String(page) }))
    }
    React.useEffect(() => {
       getBlog()
-   }, [search, page])
+   }, [search, page, blogCategory])
 
    return (
       <div className="blog_area section-padding">
