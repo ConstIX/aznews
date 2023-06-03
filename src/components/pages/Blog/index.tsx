@@ -20,6 +20,7 @@ const Blog: React.FC = () => {
       const category = (blogCategory > 0 ? `category=${blogCategory} ` : '').replace(/ /g, '')
       const newsSearch = (search ? `search=${search} ` : '')
       dispatch(fetchBlog({ category, newsSearch, page: String(page) }))
+      window.scrollTo(0, 0)
    }
    React.useEffect(() => {
       getBlog()

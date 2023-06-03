@@ -2,7 +2,7 @@ import React from 'react'
 import { setBlogCategory } from '../../../redux/slices/filterSlice'
 import { useAppDispatch, useAppSelector } from '../../../redux/store'
 
-const blogCategories = ['Resaurant food', 'Travel news', 'Modern technology', 'Product', 'Inspiration', 'Health Care']
+const blogCategories = ['Sport', 'World news', 'Modern technology', 'Сommunity', 'Economy', 'Uzbekistan']
 
 const PostWidget: React.FC = () => {
 
@@ -16,9 +16,7 @@ const PostWidget: React.FC = () => {
             {
                blogCategories.map((item, index) =>
                   <li key={item}>
-                     <li className="d-flex">
-                        <p onClick={() => dispatch(setBlogCategory(index + 1))} className={blogCategory === index + 1 ? 'active' : ''}>{item}</p>
-                     </li>
+                     <p onClick={() => dispatch(setBlogCategory(index + 1))} className={blogCategory === index + 1 ? 'active' : ''}>{item}</p>
                   </li>)
             }
 

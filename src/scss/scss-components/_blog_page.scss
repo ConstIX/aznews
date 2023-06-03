@@ -764,31 +764,32 @@
             border-bottom: 1px solid #f0e9ff;
             transition: all 0.3s ease 0s;
 
+            padding: 15px 0;
+            font-size: 14px;
+            line-height: 20px;
+            color: #888888;
+            cursor: pointer;
+
+            p {
+               margin-bottom: 0px;
+
+               &:hover {
+                  color: #fc3f00;
+               }
+
+               &.active {
+                  color: #fc3f00;
+               }
+            }
+
+
+
+
             &:last-child {
                border-bottom: 0;
             }
 
-            li {
-               padding: 15px 0;
-               font-size: 14px;
-               line-height: 20px;
-               color: #888888;
-               cursor: pointer;
 
-               p {
-                  margin-bottom: 0px;
-
-                  &:hover {
-                     color: #fc3f00;
-                  }
-
-                  &.active {
-                     color: #fc3f00;
-                  }
-               }
-
-
-            }
 
          }
       }

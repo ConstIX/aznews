@@ -7,7 +7,6 @@ import icon_tw from '../../assets/img/news/icon-tw.png'
 import icon_yo from '../../assets/img/news/icon-yo.png'
 
 import PopularWidget from '../pages/Blog/Widgets/PopularWidget'
-import PostWidget from '../pages/Blog/Widgets/PostWidget'
 import { useParams } from 'react-router-dom'
 
 type SingleBlogState = {
@@ -27,6 +26,7 @@ const SingleBlog: React.FC = () => {
             const res = await axios.get(`https://646d04c77b42c06c3b2c6d6e.mockapi.io/blog/` + pubDate)
             const data = res.data
             setSingleNews(data)
+            window.scrollTo(0, 0)
          } catch (eror) {
             alert('EROR!!!')
          }
@@ -71,7 +71,6 @@ const SingleBlog: React.FC = () => {
 
                <div className="col-lg-4">
                   <div className="blog_right_sidebar">
-                     <PostWidget />
                      <PopularWidget />
                   </div>
                </div>
