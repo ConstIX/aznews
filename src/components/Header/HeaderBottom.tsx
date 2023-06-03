@@ -38,7 +38,7 @@ const HeaderBottom: React.FC = () => {
                   <div className="main-menu d-none d-md-block">
                      <nav>
                         <ul id="navigation">
-                           {headerNav.map(obj => <li key={obj.name}><a href={obj.link}>{obj.name}</a></li>)}
+                           {headerNav.map((obj) => <li key={obj.name}><Link to={obj.link}>{obj.name}</Link></li>)}
                         </ul>
                      </nav>
                   </div>

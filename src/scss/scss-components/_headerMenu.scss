@@ -194,9 +194,17 @@
                @include transition(.3s);
                text-transform: capitalize;
                cursor: pointer;
+
+
             }
 
             &:hover {
+               &>a {
+                  color: $theme-color;
+               }
+            }
+
+            &.active {
                &>a {
                   color: $theme-color;
                }

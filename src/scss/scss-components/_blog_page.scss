@@ -797,6 +797,13 @@
 
    .popular_post_widget {
       .post_item {
+         img {
+            max-width: 100%;
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+         }
+
          .media-body {
             justify-content: center;
             align-self: center;
