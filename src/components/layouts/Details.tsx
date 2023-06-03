@@ -27,6 +27,7 @@ const Details: React.FC = () => {
             const res = await axios.get(`https://646d04c77b42c06c3b2c6d6e.mockapi.io/home/` + homeId)
             const data = res.data
             setTrendingNews(data)
+            window.scrollTo(0, 0)
          } catch (eror) {
             alert('EROR!!!')
          }

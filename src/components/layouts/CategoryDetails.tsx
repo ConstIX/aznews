@@ -27,6 +27,7 @@ const Details: React.FC = () => {
             const res = await axios.get(`https://6478e0e5362560649a2e9596.mockapi.io/catnews/` + id)
             const data = res.data
             setCategoryNews(data)
+            window.scrollTo(0, 0)
          } catch (eror) {
             alert('EROR!!!')
          }
